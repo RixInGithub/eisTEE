@@ -1,0 +1,40 @@
+# modfied from lmaosofts/GreenFellaz
+
+name: build 'n'publish
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check out
+              uses: actions/checkout@v4
+            - name: install mint
+              run: |
+                  ver=$(curl -s https://api.github.com/repos/mint-lang/mint/releases/latest | grep -Po '"html_url": "https:\/\/github.com\/mint-lang\/mint\/releases\/tag\/([0-9.]+)"' | grep -Po '/[0-9.]+' | grep -Po '(?<=.).*')
+                  curl https://github.com/mint-lang/mint/releases/download/$ver/mint-$ver-linux-x86_64 -o mint -L
+                  chmod +x ./mint
+            - name: build
+              run: |
+                  ./mint build -r --timings --verbose # idc that they yoinked away the --relative flag
+                  # find dist -type f -exec sed -i 's|/__mint__/|./__mint__/|g' {} +
+            - name: upload artifact to internet archive ig
+              uses: actions/upload-artifact@v4
+              with:
+                  name: build-output
+                  path: ./dist
+    publish:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: get artifact from internet archive??
+              uses: actions/download-artifact@v4
+              with:
+                  name: build-output
+                  path: ./public
+            - name: publish to neocitys
+              uses: bcomnes/deploy-to-neocities@v3
+              with:
+                  api_key: ${{ secrets.NEO_API }}
+                  preview_before_deploy: false # we already got all the files and folders generated from mint

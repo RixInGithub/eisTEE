@@ -1,0 +1,8 @@
+{
+	"name": "eisTEE",
+	"source-directories": ["src"],
+	"test-directories": ["eatMyShorts"],
+	"application": {
+		"title": "eisTEE"
+	}
+}
