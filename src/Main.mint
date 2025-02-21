@@ -33,6 +33,7 @@ component PageMain {
 component PageGuhhhh {
 	fun render {
 		<Nav/>
+		"404"
 	}
 }
 
