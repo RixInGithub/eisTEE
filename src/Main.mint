@@ -6,7 +6,8 @@ routes {
 
 store Store {
 	state page = ""
-	fun setPage(_page : String) {
+	
+	fun setPage (_page : String) {
 		next { page = _page }
 	}
 }
