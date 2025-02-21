@@ -1,3 +1,16 @@
+routes {
+	/ {
+		Pages.setPage("main")
+	}
+}
+
+store Store {
+	state page = ""
+	fun setPage(page : String) {
+		next { page = page }
+	}
+}
+
 component Nav {
 	fun render {
 		<nav>
@@ -7,8 +20,17 @@ component Nav {
 	}
 }
 
-component Main {
+component PageMain {
 	fun render {
 		<Nav/>
+	}
+}
+
+component Main {
+	connect Store exposing {page}
+	get content {
+		case (page) {
+			"main" => 
+		}
 	}
 }
