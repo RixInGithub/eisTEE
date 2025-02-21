@@ -38,7 +38,7 @@ component Main {
 	fun render {
 		case (page) {
 			"main" => <PageMain/>
-			=> <PageGuhhhh>
+			=> <PageGuhhhh/>
 		}
 	}
 }
