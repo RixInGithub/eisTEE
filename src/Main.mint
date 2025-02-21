@@ -31,7 +31,7 @@ component Main {
 	connect Store exposing {page}
 	get content {
 		case (page) {
-			"main" => 
+			"main" => <PageMain/>
 		}
 	}
 }
