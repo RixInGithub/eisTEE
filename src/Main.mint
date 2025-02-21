@@ -1,14 +1,14 @@
 routes {
-	/ {
+	/ { // we dont need PARSEROUTE on this since index.html is preincluded
 		Store.setPage("main")
 	}
-	/not_found.html { // trick mint into creating a 404 page too
+	/not_found { // PARSEROUTE
 		Store.setPage("guh?")
 	}
-}
+} // ENDROUTES
 
 store Store {
-	state page = ""
+	state page = "guh?"
 	
 	fun setPage (nPage : String) {
 		next { page: nPage }
