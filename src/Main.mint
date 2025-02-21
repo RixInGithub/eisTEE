@@ -22,8 +22,12 @@ window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entr
 }
 
 component Nav {
+	style bar {
+		display: flex;
+	}
+
 	fun render {
-		<nav>
+		<nav::bar> // get it? navbar?
 			<img src="https://eistee.x10.bz/index.php" referrerpolicy="origin"/>
 			"testing"
 		</nav>

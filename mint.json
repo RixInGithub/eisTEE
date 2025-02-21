@@ -3,6 +3,10 @@
 	"source-directories": ["src"],
 	"test-directories": ["eatMyShorts"],
 	"application": {
-		"title": "eisTEE"
+		"title": "eisTEE",
+		"head": "assets/head.html",
+		"meta": {
+			"viewport": "width=device-width, initial-scale=1.0"
+		}
 	}
 }
