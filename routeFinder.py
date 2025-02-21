@@ -12,4 +12,4 @@ with(open("./src/Main.mint","r"))as(c):
 		o+=[l]
 		r+=[l+(""if(l).endswith("PARSEROUTE")else".html")]
 for(l)in(r):[__import__("os").makedirs(f"./dist/{"/".join(l.split("/")[:-1])}",exist_ok=True),__import__("shutil").copy2("./dist/index.html","./dist/"+l)]
-if(len(o)):print("Page(s)\x20found:\n\n"+"\n".join([f"{chr(32)*4}-\x20{o[ind]if(o)[ind]==r[ind]else(o[ind]+chr(32)+chr(61)+chr(62)+chr(32)+r[ind])}"for[ind,_]in(enumerate(o))]))
+if(len(o)):print("Page(s)\x20found:\n\n"+"\n".join([f"{chr(32)*4}-\x20/{o[ind]if(o)[ind]==r[ind]else(o[ind]+chr(32)+chr(61)+chr(62)+chr(32)+chr(47)+r[ind])}"for[ind,_]in(enumerate(o))]))
