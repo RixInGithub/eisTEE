@@ -24,6 +24,7 @@ window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entr
 component Nav {
 	style bar {
 		display: flex;
+		padding: 8px;
 	}
 
 	fun render {
@@ -36,27 +37,33 @@ component Nav {
 
 component PageMain {
 	fun render {
-		<>
-			<Nav/>
-		</>
+		Html.blank()
 	}
 }
 
 component PageGuhhhh {
 	fun render {
 		<>
-			<Nav/>
 			"404"
 		</>
 	}
 }
 
-component Main {
+component DecisivePage {
 	connect Store exposing {page}
 	fun render {
 		case (page) {
 			"main" => <PageMain/>
 			=> <PageGuhhhh/>
 		}
+	}
+}
+
+component Main {
+	fun render {
+		<>
+			<Nav/>
+			<DecisivePage/>
+		</>
 	}
 }
