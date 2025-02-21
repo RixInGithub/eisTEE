@@ -26,14 +26,18 @@ component Nav {
 
 component PageMain {
 	fun render {
-		<Nav/>
+		<>
+			<Nav/>
+		</>
 	}
 }
 
 component PageGuhhhh {
 	fun render {
-		<Nav/>
-		"404"
+		<>
+			<Nav/>
+			"404"
+		</>
 	}
 }
 
