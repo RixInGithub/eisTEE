@@ -27,11 +27,18 @@ component PageMain {
 	}
 }
 
+component PageGuhhhh {
+	fun render {
+		<Nav/>
+	}
+}
+
 component Main {
 	connect Store exposing {page}
 	fun render {
 		case (page) {
 			"main" => <PageMain/>
+			=> <PageGuhhhh>
 		}
 	}
 }
