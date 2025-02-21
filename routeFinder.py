@@ -1,12 +1,15 @@
 #i_dare_you_to_find_any_SPACES
+o=[]
 r=[]
-with(open("./src/Main.mint","r"))as(codeIO):
-	for(l)in(codeIO.read().split("\n")):
+with(open("./src/Main.mint","r"))as(c):
+	for(l)in(c.read().split("\n")):
 		while(l).startswith("\x20")or(l).startswith("\t"):l=l[1:]
 		if(l).endswith("ENDROUTES"):break
 		if(not(l).endswith("PARSEROUTEHTML"))or(not(l).endswith("PARSEROUTE")):continue
 		l=l[1:]
 		wtsp=min([(a)for(a)in[l.find("\x20"),l.find("\t")]if-1!=a]or-1)
 		if-1!=wtsp:l=l[:wtsp]
+		o+=[l]
 		r+=[l+(""if(l).endswith("PARSEROUTE")else".html")]
 for(l)in(r):[__import__("os").makedirs(f"./dist/{"/".join(l.split("/")[:-1])}",exist_ok=True),__import__("shutil").copy2("./dist/index.html","./dist/"+l)]
+if(len(o)):print("Page(s)\x20found:\n\n"+"\n".join([f"{chr(32)*4}-\x20{o[ind]if(o)[ind]==r[ind]else(o[ind]+chr(32)+chr(61)+chr(62)+chr(32)+r[ind])}"for[ind,_]in(enumerate(o))]))
