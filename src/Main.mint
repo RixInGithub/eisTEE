@@ -1,6 +1,6 @@
 routes {
 	/ {
-		Pages.setPage("main")
+		Store.setPage("main")
 	}
 }
 
