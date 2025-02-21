@@ -5,7 +5,7 @@ with(open("./src/Main.mint","r"))as(c):
 	for(l)in(c.read().split("\n")):
 		while(l).startswith("\x20")or(l).startswith("\t"):l=l[1:]
 		if(l).endswith("ENDROUTES"):break
-		if(not(l).endswith("PARSEROUTEHTML"))or(not(l).endswith("PARSEROUTE")):continue
+		if(not(l).endswith("PARSEROUTEHTML")or(l).endswith("PARSEROUTE")):continue
 		l=l[1:]
 		wtsp=min([(a)for(a)in[l.find("\x20"),l.find("\t")]if-1!=a]or-1)
 		if-1!=wtsp:l=l[:wtsp]
