@@ -29,7 +29,7 @@ component PageMain {
 
 component Main {
 	connect Store exposing {page}
-	get content {
+	fun render {
 		case (page) {
 			"main" => <PageMain/>
 		}
