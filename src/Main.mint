@@ -1,3 +1,5 @@
+use Html
+
 routes {
 	/ { // we dont need PARSEROUTE on this since index.html is preincluded
 		Store.setPage("main")
