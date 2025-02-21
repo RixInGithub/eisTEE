@@ -7,8 +7,12 @@ routes {
 	}
 } // ENDROUTES
 
-`
-function api(a) {
+store Store {
+	state page = "guh?"
+	
+	fun setPage (nPage : String) {
+	`
+window.api=function(a){
 	eval("var\x20b,e,f,g,h,k")
 	a=Object.entries(a).map(function(b){return""+b.map(encodeURIComponent).join("=")}).join("&")
 	b=Reflect.construct(Image,[])
@@ -36,12 +40,7 @@ function api(a) {
 		document.head.appendChild(b)
 	}])
 }
-`
-
-store Store {
-	state page = "guh?"
-	
-	fun setPage (nPage : String) {
+	`
 		next { page: nPage }
 	}
 }
