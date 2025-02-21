@@ -12,7 +12,7 @@ jobs:
               uses: actions/checkout@v4
             - uses: actions/setup-python@v5
               with:
-                  python-version: 'latest'
+                  python-version: '<4'
             - name: install mint
               run: |
                   ver=$(curl -s https://api.github.com/repos/mint-lang/mint/releases/latest | grep -Po '"html_url": "https:\/\/github.com\/mint-lang\/mint\/releases\/tag\/([0-9.]+)"' | grep -Po '/[0-9.]+' | grep -Po '(?<=.).*')
