@@ -1,7 +1,7 @@
 component Nav {
 	fun render {
 		<nav>
-			<img src="https://silly.42web.io/eistee.php" referrerpolicy="origin"/>
+			<img src="https://eistee.x10.bz/index.php" referrerpolicy="origin"/>
 			"testing"
 		</nav>
 	}
