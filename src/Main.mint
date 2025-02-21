@@ -2,6 +2,9 @@ routes {
 	/ {
 		Store.setPage("main")
 	}
+	/not_found.html { // trick mint into creating a 404 page too
+		Store.setPage("guh?")
+	}
 }
 
 store Store {
