@@ -8,7 +8,7 @@ store Store {
 	state page = ""
 	
 	fun setPage (nPage : String) {
-		next { page = nPage }
+		next { page: nPage }
 	}
 }
 
