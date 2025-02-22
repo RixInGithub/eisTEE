@@ -37,7 +37,7 @@ component Nav {
 
 component PageMain {
 	fun render {
-		<></>
+		Html.empty()
 	}
 }
 
