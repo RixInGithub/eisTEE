@@ -66,14 +66,20 @@ component DecisivePage {
 }
 
 component Main {
-	style container {
+	style page {
 		height: 100%;
 	}
 
+	style uppermost {
+		--font: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Tahoma, sans-serif;
+		--fSiz: 9pt;
+		font: var(--fSiz) var(--font);
+	}
+
 	fun render {
-		<>
+		<div::uppermost>
 			<Nav/>
-			<div::container><DecisivePage/></div>
-		</>
+			<div::page><DecisivePage/></div>
+		</div>
 	}
 }
