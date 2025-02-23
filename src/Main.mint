@@ -76,6 +76,7 @@ component Main {
 		--font: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Tahoma, sans-serif;
 		--fSiz: 10.5pt;
 		font: var(--fSiz) var(--font);
+		height: 100%;
 	}
 
 	fun render {
