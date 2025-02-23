@@ -28,18 +28,16 @@ window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entr
 }
 
 component Nav {
-	style nWrap {
-		background-color: #061f60;
-		color: White;
-		border-bottom-left-radius: 50%;
-		border-bottom-right-radius: 50%;
-	}
-
 	style bar {
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
-		padding: 4px;
+		gap: 8px;
+		padding: 16px;
+		background-color: #061f60;
+		color: White;
+		margin: auto;
+		border-bottom-left-radius: 16px;
+		border-bottom-right-radius: 16px;
 	}
 
 	style c {
@@ -53,15 +51,13 @@ component Nav {
 	}
 
 	fun render {
-		<div::nWrap>
-			<nav::bar> // get it? navbar?
-				<form::c::menu action="/src/">
-					<strong>"eisTEE"</strong>
-					<input name="q" placeholder="wie man eistee macht..."/>
-				</form>
-				<div::menu>"testing"</div>
-			</nav>
-		</div>
+		<nav::bar> // get it? navbar?
+			<form::c::menu action="/src/">
+				<strong>"eisTEE"</strong>
+				<input name="q" placeholder="wie man eistee macht..."/>
+			</form>
+			<div::menu>"testing"</div>
+		</nav>
 	}
 }
 
