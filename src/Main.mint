@@ -42,10 +42,16 @@ component PageMain {
 }
 
 component PageGuhhhh {
+	style c {
+		
+	}
+
 	fun render {
-		<>
-			"404"
-		</>
+		<div::c>
+			<h1>404</h1>
+			<p>Page not found, try again later or check the spelling of the URL.</p>
+			<p>This may also happen because of a broken link from an older website.</p>
+		</div>
 	}
 }
 
@@ -60,10 +66,14 @@ component DecisivePage {
 }
 
 component Main {
+	style container {
+		height: 100%;
+	}
+
 	fun render {
 		<>
 			<Nav/>
-			<DecisivePage/>
+			<div::container><DecisivePage/></div>
 		</>
 	}
 }
