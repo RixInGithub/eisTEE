@@ -72,14 +72,22 @@ component Nav {
 
 	style b {
 		border: 1px solid CurrentColor;
+		background-color: Transparent;
+		padding: 0;
+		width: 21px;
+		height: 21px;
 	}
+
+	style inpCont {gap: 0;}
 
 	fun render {
 		<nav::bar> // get it? navbar?
 			<form::menu action="/src/">
 				<strong><a href="/">"eisTEE"</a></strong>
-				<input::i name="q" placeholder="wie man eistee macht..."/>
-				<button::b class="fa fa-search"/>
+				<div::menu::inpCont>
+					<input::i name="q" placeholder="wie man eistee macht..."/>
+					<button::b class="fa fa-search"/>
+				</div>
 			</form>
 			<div::menu>
 				<a href="/login/" class="fa fa-sign-in"/>
