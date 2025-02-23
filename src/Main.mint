@@ -42,9 +42,11 @@ component PageMain {
 }
 
 component PageGuhhhh {
-	style c {
-		
-	}
+	/*
+		style c {
+			
+		}
+	*/
 
 	fun render {
 		<div::c>
