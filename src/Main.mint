@@ -37,7 +37,7 @@ component Nav {
 	fun render {
 		<nav::bar> // get it? navbar?
 			<form>
-				<strong>eisTEE</strong>
+				<strong>"eisTEE"</strong>
 				<input name="q" placeholder="wie man eistee macht..."/>
 			</form>
 			"testing"
