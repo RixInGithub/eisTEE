@@ -76,6 +76,7 @@ component Nav {
 		padding: 0;
 		width: 21px;
 		cursor: pointer;
+		font-size: 0.8em;
 	}
 
 	style inpCont {gap: 0;align-items: stretch;}
@@ -148,7 +149,7 @@ component PageMain {
 
 	fun render {
 		<form::f::tC action="/src/">
-			<h1::tC>"eisTEE"</h1>
+			<h1::tC style="margin-bottom: 2.5%">"eisTEE"</h1>
 			<div::inpCnt>
 				<input::i name="q" placeholder="wie man eistee macht..."/>
 				<button::btn class="fa fa-search"/>
