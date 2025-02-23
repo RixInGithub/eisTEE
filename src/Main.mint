@@ -36,7 +36,7 @@ component Nav {
 		display: flex;
 		flex-direction: row;
 		row-gap: 4px;
-		padding: 2px;
+		padding: 2px 4px;
 		background-color: #061f60;
 		color: White;
 		justify-content: space-between;
@@ -48,11 +48,8 @@ component Nav {
 		flex-direction: row;
 		gap: 4px;
 		align-items: center;
-	}
-
-	style icn {
-		text-decoration: none;
-		color: inherit;
+		
+		& * {text-decoration: none;color: inherit;}
 	}
 
 	fun render {
