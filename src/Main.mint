@@ -75,10 +75,10 @@ component Nav {
 		background-color: Transparent;
 		padding: 0;
 		width: 21px;
-		height: 21px;
+		cursor: pointer;
 	}
 
-	style inpCont {gap: 0;}
+	style inpCont {gap: 0;align-items: stretch;}
 
 	fun render {
 		<nav::bar> // get it? navbar?
