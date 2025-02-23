@@ -61,18 +61,24 @@ component Nav {
 component PageMain {
 	style c {
 		align-self: center;
+		width: 50%;
 	}
 
 	style i {
 		border: 2px solid CurrentColor;
 		font-weight: bold;
 		padding: 2px;
+		width: 200px;
+	}
+	
+	style tc {
+		text-align: center;
 	}
 
 	fun render {
-		<form::c action="/src/">
-			<h1>"eisTEE"</h1>
-			<input::i name="q" placeholder="wie man eistee macht..."/>
+		<form::c::tc action="/src/">
+			<h1::tc>"eisTEE"</h1>
+			<input::i::tc name="q" placeholder="wie man eistee macht..."/>
 		</form>
 	}
 }
