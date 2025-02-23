@@ -60,7 +60,7 @@ component Nav {
 
 component PageMain {
 	style f {
-		margin-top: 10%;
+		margin-top: 5% !important;
 		display: flex;
 		flex-direction: column;
 		align-self: center;
