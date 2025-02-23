@@ -136,16 +136,13 @@ component PageMain {
 	}
 
 	fun render {
-		<>
-			<style>"body>div>div{display: flex;flex-direction: column;}"</style>
-			<form::f::tC action="/src/">
-				<h1::tC>"eisTEE"</h1>
-				<div::inpCnt>
-					<input::i name="q" placeholder="wie man eistee macht..."/>
-					<button::btn class="fa fa-search"/>
-				</div>
-			</form>
-		</>
+		<form::f::tC action="/src/">
+			<h1::tC>"eisTEE"</h1>
+			<div::inpCnt>
+				<input::i name="q" placeholder="wie man eistee macht..."/>
+				<button::btn class="fa fa-search"/>
+			</div>
+		</form>
 	}
 }
 
@@ -202,6 +199,8 @@ component Main {
 		--fSiz: 10.5pt;
 		font: var(--fSiz) var(--font);
 		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	fun render {
