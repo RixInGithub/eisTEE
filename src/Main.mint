@@ -68,7 +68,7 @@ component PageMain {
 		border: 2px solid CurrentColor;
 		font-weight: bold;
 		padding: 2px;
-		width: 200px;
+		width: 100%;
 	}
 	
 	style tc {
