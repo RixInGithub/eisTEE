@@ -62,7 +62,7 @@ component PageMain {
 
 	fun render {
 		<form::c action="/src/">
-			<h1>eisTEE</h1>
+			<h1>"eisTEE"</h1>
 			<input name="q" placeholder="wie man eistee macht..."/>
 		</form>
 	}
