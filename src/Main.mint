@@ -75,7 +75,7 @@ component PageMain {
 		padding: 2px;
 		width: 100%;
 		outline: 0;
-		text-align: right;
+		text-align: left;
 
 		&::placeholder, &::-webkit-placeholder {
 			font-style: italic;
@@ -83,7 +83,7 @@ component PageMain {
 		}
 	}
 
-	style tc {
+	style tC {
 		text-align: center;
 		margin-top: 0;
 	}
@@ -99,9 +99,14 @@ component PageMain {
 		cursor: pointer;
 	}
 
+	style inpC {
+		display: flex;
+		flex-direction: row;
+	}
+
 	fun render {
-		<form::f::tc action="/src/">
-			<h1::tc>"eisTEE"</h1>
+		<form::f::tC action="/src/">
+			<h1::tC>"eisTEE"</h1>
 			<div>
 				<input::i name="q" placeholder="wie man eistee macht..."/>
 				<button::btn class="fa fa-search"/>
