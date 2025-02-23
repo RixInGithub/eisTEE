@@ -59,7 +59,10 @@ component Nav {
 }
 
 component PageMain {
-	style c {
+	style f {
+		margin-top: 10%;
+		display: flex;
+		flex-direction: column;
 		align-self: center;
 		width: 50%;
 	}
@@ -67,18 +70,26 @@ component PageMain {
 	style i {
 		border: 2px solid CurrentColor;
 		font-weight: bold;
+		font-style: italic;
 		padding: 2px;
 		width: 100%;
 	}
-	
+
 	style tc {
 		text-align: center;
 	}
 
+	style btn {
+		font-size: 28px;
+	}
+
 	fun render {
-		<form::c::tc action="/src/">
+		<form::f::tc action="/src/">
 			<h1::tc>"eisTEE"</h1>
-			<input::i::tc name="q" placeholder="wie man eistee macht..."/>
+			<div>
+				<input::i::tc name="q" placeholder="wie man eistee macht..."/>
+				<button::btn class="fa fa-search"/>
+			</div>
 		</form>
 	}
 }
