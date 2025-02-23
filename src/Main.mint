@@ -149,6 +149,18 @@ component PageMain {
 	}
 }
 
+component PageSrc {
+	fun render {
+		"wip"
+	}
+}
+
+component PageLogin {
+	fun render {
+		"wip"
+	}
+}
+
 component PageGuhhhh {
 	style c {
 		align-self: center;
@@ -166,18 +178,13 @@ component PageGuhhhh {
 	}
 }
 
-component PageSrc {
-	fun render {
-		"wip"
-	}
-}
-
 component DecisivePage {
 	connect Store exposing {page}
 	fun render {
 		case (page) {
 			"main" => <PageMain/>
 			"sResults" => <PageSrc/>
+			"login" => <PageLogin/>
 			=> <PageGuhhhh/>
 		}
 	}
