@@ -50,13 +50,24 @@ component Nav {
 		gap: inherit;
 	}
 
+	style icn {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	fun render {
 		<nav::bar> // get it? navbar?
 			<form::c::menu action="/src/">
 				<strong>"eisTEE"</strong>
 				<input name="q" placeholder="wie man eistee macht..."/>
 			</form>
-			<div::menu>"testing"</div>
+			<div::menu>
+				<div::menu></div>
+				<div::menu></div>
+				<div::menu>
+					<a::icn href="/login/" class="fa fa-sign-in"/>
+				</div>
+			</div>
 		</nav>
 	}
 }
