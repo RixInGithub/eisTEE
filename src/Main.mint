@@ -42,11 +42,9 @@ component PageMain {
 }
 
 component PageGuhhhh {
-	/*
-		style c {
-			
-		}
-	*/
+	style c {
+		color: inherit;
+	}
 
 	fun render {
 		<div::c>
