@@ -59,7 +59,7 @@ component Nav {
 				<input name="q" placeholder="wie man eistee macht..."/>
 			</form>
 			<div::menu>
-				<a::icn href="/login/" class="fa fa-sign-in"/>
+				<a href="/login/" class="fa fa-sign-in"/>
 			</div>
 		</nav>
 	}
