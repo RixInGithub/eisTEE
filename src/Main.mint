@@ -30,13 +30,16 @@ window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entr
 component Nav {
 	style bar {
 		display: flex;
+		flex-direction: row;
 		padding: 8px;
 	}
 
 	fun render {
 		<nav::bar> // get it? navbar?
-			<strong>eisTEE</strong>
-			<input/>
+			<form>
+				<strong>eisTEE</strong>
+				<input name="q" placeholder="wie man eistee macht..."/>
+			</form>
 			"testing"
 		</nav>
 	}
@@ -51,7 +54,7 @@ component PageMain {
 		<form::c action="/src/">
 			<h1>eisTEE</h1>
 			<input name="q" placeholder="wie man eistee macht..."/>
-		</div>
+		</form>
 	}
 }
 
