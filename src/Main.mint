@@ -55,16 +55,27 @@ component Nav {
 		color: inherit;
 	}
 
+	style inner {
+		gap: 0;
+	}
+
+	style left {
+		justify-content: flex-start;
+	}
+
+	style left {
+		justify-content: flex-end;
+	}
+
 	fun render {
 		<nav::bar> // get it? navbar?
 			<form::c::menu action="/src/">
 				<strong>"eisTEE"</strong>
 				<input name="q" placeholder="wie man eistee macht..."/>
 			</form>
-			<div::menu>
-				<div::menu></div>
-				<div::menu></div>
-				<div::menu>
+			<div::menu::inner>
+				<div::menu::left></div>
+				<div::menu::right>
 					<a::icn href="/login/" class="fa fa-sign-in"/>
 				</div>
 			</div>
