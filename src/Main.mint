@@ -94,8 +94,8 @@ component PageMain {
 		text-align: center;
 		border: 0;
 		padding: 0;
-		background-color: black;
-		color: white;
+		background-color: Black;
+		color: White;
 		cursor: pointer;
 	}
 
