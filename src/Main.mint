@@ -51,12 +51,26 @@ component Nav {
 		
 		& * {text-decoration: none;color: inherit;}
 	}
+	
+	style i {
+		font: inherit;
+		border: 1px solid CurrentColor;
+		padding: 1px;
+		outline: 0;
+		background-color: Transparent;
+		
+		&::placeholder, &::-webkit-placeholder {
+			font-style: italic;
+			text-align: center;
+			color: inherit;
+		}
+	}
 
 	fun render {
 		<nav::bar> // get it? navbar?
 			<form::menu action="/src/">
 				<strong><a href="/">"eisTEE"</a></strong>
-				<input name="q" placeholder="wie man eistee macht..."/>
+				<input::i name="q" placeholder="wie man eistee macht..."/>
 			</form>
 			<div::menu>
 				<a href="/login/" class="fa fa-sign-in"/>
