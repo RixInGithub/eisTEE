@@ -56,6 +56,7 @@ component Nav {
 		font: inherit;
 		font-size: 80%;
 		border: 1px solid CurrentColor;
+		border-right: 0;
 		padding: 1px;
 		outline: 0;
 		background-color: Transparent;
@@ -69,11 +70,16 @@ component Nav {
 		}
 	}
 
+	style b {
+		border: 1px solid CurrentColor;
+	}
+
 	fun render {
 		<nav::bar> // get it? navbar?
 			<form::menu action="/src/">
 				<strong><a href="/">"eisTEE"</a></strong>
 				<input::i name="q" placeholder="wie man eistee macht..."/>
+				<button::b class="fa fa-search"/>
 			</form>
 			<div::menu>
 				<a href="/login/" class="fa fa-sign-in"/>
