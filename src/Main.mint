@@ -5,6 +5,12 @@ routes {
 	/not_found { // PARSEROUTEHTML
 		Store.setPage("guh?")
 	}
+	/*
+		/src/index // PARSEROUTEHTML
+	*/
+	/src/ {
+		Store.setPage("sResults")
+	}
 } // ENDROUTES
 
 store Store {
@@ -29,15 +35,23 @@ component Nav {
 
 	fun render {
 		<nav::bar> // get it? navbar?
-			<img src="https://eistee.x10.bz/index.php" referrerpolicy="origin"/>
+			<strong>eisTEE<strong>
+			<input/>
 			"testing"
 		</nav>
 	}
 }
 
 component PageMain {
+	style c {
+		align-self: center;
+	}
+
 	fun render {
-		Html.empty()
+		<form::c action="/src/">
+			<h1>eisTEE</h1>
+			<input name="q" placeholder="wie man eistee macht..."/>
+		</div>
 	}
 }
 
@@ -58,11 +72,19 @@ component PageGuhhhh {
 	}
 }
 
+component PageSrc {
+
+	fun render {
+		"wip"
+	}
+}
+
 component DecisivePage {
 	connect Store exposing {page}
 	fun render {
 		case (page) {
 			"main" => <PageMain/>
+			"sResults" => <PageSrc/>
 			=> <PageGuhhhh/>
 		}
 	}
