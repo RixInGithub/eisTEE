@@ -54,6 +54,7 @@ component Nav {
 	
 	style i {
 		font: inherit;
+		font-size: 80%;
 		border: 1px solid CurrentColor;
 		padding: 1px;
 		outline: 0;
