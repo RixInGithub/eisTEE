@@ -52,7 +52,7 @@ component PageGuhhhh {
 		<div::c>
 			<h1>404</h1>
 			<p>"Page not found, try again later or check the spelling of the URL."</p>
-			<p>This may also happen because of a broken link from an older website.</p>
+			<p>"This may also happen because of a broken link from an older website."</p>
 		</div>
 	}
 }
