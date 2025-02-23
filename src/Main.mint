@@ -31,8 +31,10 @@ component Nav {
 	style bar {
 		display: flex;
 		flex-direction: column;
-		gap: 2px;
-		padding: 2px;
+		gap: 4px;
+		padding: 4px;
+		background-color: #061f60;
+		color: White;
 	}
 
 	style c {
@@ -42,15 +44,16 @@ component Nav {
 	style menu {
 		display: flex;
 		flex-direction: row;
+		gap: inherit;
 	}
 
 	fun render {
 		<nav::bar> // get it? navbar?
-			<form::c action="/src/">
+			<form::c::menu action="/src/">
 				<strong>"eisTEE"</strong>
 				<input name="q" placeholder="wie man eistee macht..."/>
 			</form>
-			<div::menu></div>
+			<div::menu>"testing"</div>
 		</nav>
 	}
 }
