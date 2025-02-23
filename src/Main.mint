@@ -34,13 +34,11 @@ window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entr
 component Nav {
 	style bar {
 		display: flex;
-		flex-direction: column;
-		gap: 8px;
-		padding: 16px;
+		flex-direction: row;
+		gap: 1px;
+		padding: 1px;
 		background-color: #061f60;
 		color: White;
-		margin-right: auto;
-		border-bottom-right-radius: 16px;
 	}
 
 	style c {
@@ -74,15 +72,12 @@ component Nav {
 
 	fun render {
 		<nav::bar> // get it? navbar?
-			<form::c::menu action="/src/">
-				<strong>"eisTEE"</strong>
+			<form::left::menu style="align-items: center;" action="/src/">
+				<strong><a href="/">"eisTEE"</a></strong>
 				<input name="q" placeholder="wie man eistee macht..."/>
 			</form>
-			<div::menu::inner>
-				<div::menu::left></div>
-				<div::menu::right>
-					<a::icn href="/login/" class="fa fa-sign-in"/>
-				</div>
+			<div::right::menu>
+				<a::icn href="/login/" class="fa fa-sign-in"/>
 			</div>
 		</nav>
 	}
