@@ -35,7 +35,7 @@ component Nav {
 
 	fun render {
 		<nav::bar> // get it? navbar?
-			<strong>eisTEE<strong>
+			<strong>eisTEE</strong>
 			<input/>
 			"testing"
 		</nav>
