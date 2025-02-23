@@ -68,6 +68,8 @@ component DecisivePage {
 component Main {
 	style page {
 		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	style uppermost {
