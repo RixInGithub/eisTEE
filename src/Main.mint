@@ -106,7 +106,7 @@ component PageMain {
 
 	fun render {
 		<>
-			<style>"body>div{display: flex;}"</style>
+			<style>"body>div>div{display: flex;flex-direction: column;}"</style>
 			<form::f::tC action="/src/">
 				<h1::tC>"eisTEE"</h1>
 				<div::inpCnt>
