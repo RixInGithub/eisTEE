@@ -43,7 +43,7 @@ component PageMain {
 
 component PageGuhhhh {
 	style c {
-		color: inherit;
+		align-self: center;
 	}
 
 	fun render {
