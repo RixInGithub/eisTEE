@@ -194,6 +194,7 @@ component Main {
 
 	style page {
 		background-color: #606da0;
+		color: White;
 	}
 
 	fun render {
