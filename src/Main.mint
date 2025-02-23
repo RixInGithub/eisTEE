@@ -199,7 +199,7 @@ component Main {
 	fun render {
 		<div::a::uppermost>
 			<Nav/>
-			<div::a><DecisivePage/></div>
+			<div::a::page><DecisivePage/></div>
 		</div>
 	}
 }
