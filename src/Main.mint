@@ -105,13 +105,16 @@ component PageMain {
 	}
 
 	fun render {
-		<form::f::tC action="/src/">
-			<h1::tC>"eisTEE"</h1>
-			<div::inpCnt>
-				<input::i name="q" placeholder="wie man eistee macht..."/>
-				<button::btn class="fa fa-search"/>
-			</div>
-		</form>
+		<>
+			<style>"body>div{display: flex;}"</style>
+			<form::f::tC action="/src/">
+				<h1::tC>"eisTEE"</h1>
+				<div::inpCnt>
+					<input::i name="q" placeholder="wie man eistee macht..."/>
+					<button::btn class="fa fa-search"/>
+				</div>
+			</form>
+		</>
 	}
 }
 
