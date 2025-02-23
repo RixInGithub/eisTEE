@@ -63,10 +63,16 @@ component PageMain {
 		align-self: center;
 	}
 
+	style i {
+		border: 2px solid CurrentColor;
+		font-weight: bold;
+		padding: 2px;
+	}
+
 	fun render {
 		<form::c action="/src/">
 			<h1>"eisTEE"</h1>
-			<input name="q" placeholder="wie man eistee macht..."/>
+			<input::i name="q" placeholder="wie man eistee macht..."/>
 		</form>
 	}
 }
