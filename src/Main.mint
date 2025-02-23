@@ -69,25 +69,41 @@ component PageMain {
 
 	style i {
 		border: 2px solid CurrentColor;
-		font-weight: bold;
-		font-style: italic;
+		border-right: 0;
+		font: inherit;
+		font-size: 90%;
 		padding: 2px;
 		width: 100%;
+		outline: 0;
+		text-align: right;
+
+		&::placeholder, &::-webkit-placeholder {
+			font-style: italic;
+			text-align: center;
+		}
 	}
 
 	style tc {
 		text-align: center;
+		margin-top: 0;
 	}
 
 	style btn {
-		font-size: 28px;
+		flex-shrink: 0;
+		width: 28px;
+		text-align: center;
+		border: 0;
+		padding: 0;
+		background-color: black;
+		color: white;
+		cursor: pointer;
 	}
 
 	fun render {
 		<form::f::tc action="/src/">
 			<h1::tc>"eisTEE"</h1>
 			<div>
-				<input::i::tc name="q" placeholder="wie man eistee macht..."/>
+				<input::i name="q" placeholder="wie man eistee macht..."/>
 				<button::btn class="fa fa-search"/>
 			</div>
 		</form>
