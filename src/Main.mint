@@ -58,6 +58,7 @@ component Nav {
 		padding: 1px;
 		outline: 0;
 		background-color: Transparent;
+		width: 130px;
 		
 		&::placeholder, &::-webkit-placeholder {
 			font-style: italic;
