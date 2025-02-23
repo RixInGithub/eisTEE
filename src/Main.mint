@@ -63,7 +63,7 @@ component Nav {
 		justify-content: flex-start;
 	}
 
-	style left {
+	style right {
 		justify-content: flex-end;
 	}
 
