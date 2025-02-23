@@ -72,7 +72,7 @@ component Main {
 
 	style uppermost {
 		--font: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Tahoma, sans-serif;
-		--fSiz: 9pt;
+		--fSiz: 10.5pt;
 		font: var(--fSiz) var(--font);
 	}
 
