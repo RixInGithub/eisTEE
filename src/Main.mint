@@ -61,10 +61,12 @@ component Nav {
 
 	style left {
 		justify-content: flex-start;
+		width: 50%;
 	}
 
 	style right {
 		justify-content: flex-end;
+		width: 50%;
 	}
 
 	fun render {
