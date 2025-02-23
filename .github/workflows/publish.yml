@@ -42,3 +42,5 @@ jobs:
               with:
                   api_key: ${{ secrets.NEO_API }}
                   preview_before_deploy: false # we already got all the files and folders generated from mint
+                  protected_files: robots.txt
+                  cleanup: true
