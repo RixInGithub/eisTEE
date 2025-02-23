@@ -59,7 +59,7 @@ component Nav {
 		padding: 1px;
 		outline: 0;
 		background-color: Transparent;
-		width: 130px;
+		width: 145px;
 		
 		&::placeholder, &::-webkit-placeholder {
 			font-style: italic;
@@ -180,7 +180,7 @@ component DecisivePage {
 }
 
 component Main {
-	style page {
+	style a {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -190,15 +190,16 @@ component Main {
 		--font: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Tahoma, sans-serif;
 		--fSiz: 10.5pt;
 		font: var(--fSiz) var(--font);
-		height: 100%;
-		display: flex;
-		flex-direction: column;
+	}
+
+	style page {
+		background-color: #606da0;
 	}
 
 	fun render {
-		<div::uppermost>
+		<div::a::uppermost>
 			<Nav/>
-			<div::page><DecisivePage/></div>
+			<div::a><DecisivePage/></div>
 		</div>
 	}
 }
