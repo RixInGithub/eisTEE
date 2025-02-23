@@ -65,6 +65,7 @@ component Nav {
 			font-style: italic;
 			text-align: center;
 			color: inherit;
+			opacity: 0.8;
 		}
 	}
 
@@ -91,6 +92,7 @@ component PageMain {
 	}
 
 	style i {
+		color: inherit;
 		border: 2px solid CurrentColor;
 		border-right: 0;
 		font: inherit;
@@ -99,10 +101,13 @@ component PageMain {
 		width: 100%;
 		outline: 0;
 		text-align: left;
+		background-color: Black;
 
 		&::placeholder, &::-webkit-placeholder {
 			font-style: italic;
 			text-align: center;
+			color: inherit;
+			opacity: 0.8;
 		}
 	}
 
@@ -117,8 +122,8 @@ component PageMain {
 		text-align: center;
 		border: 0;
 		padding: 0;
-		background-color: Black;
-		color: White;
+		background-color: White;
+		color: Black;
 		cursor: pointer;
 	}
 
