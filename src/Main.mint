@@ -1,15 +1,19 @@
 routes {
+	/* routeparsing doesnt cover most holes
+		/src/index // PARSEROUTEHTML
+		/login/index // PARSEROUTEHTML
+	*/
 	/ { // we dont need PARSEROUTE on this since index.html is preincluded
 		Store.setPage("main")
 	}
 	/not_found { // PARSEROUTEHTML
 		Store.setPage("guh?")
 	}
-	/*
-		/src/index // PARSEROUTEHTML
-	*/
 	/src/ {
 		Store.setPage("sResults")
+	}
+	/login/ {
+		Store.setPage("login")
 	}
 } // ENDROUTES
 
