@@ -35,20 +35,19 @@ component Nav {
 	style bar {
 		display: flex;
 		flex-direction: row;
-		gap: 1px;
-		padding: 1px;
+		row-gap: 4px;
+		padding: 2px;
 		background-color: #061f60;
 		color: White;
-	}
-
-	style c {
-		align-self: center;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	style menu {
 		display: flex;
 		flex-direction: row;
-		gap: inherit;
+		gap: 4px;
+		align-items: center;
 	}
 
 	style icn {
@@ -56,27 +55,13 @@ component Nav {
 		color: inherit;
 	}
 
-	style inner {
-		gap: 0;
-	}
-
-	style left {
-		justify-content: flex-start;
-		width: 50%;
-	}
-
-	style right {
-		justify-content: flex-end;
-		width: 50%;
-	}
-
 	fun render {
 		<nav::bar> // get it? navbar?
-			<form::left::menu style="align-items: center;" action="/src/">
+			<form::menu action="/src/">
 				<strong><a href="/">"eisTEE"</a></strong>
 				<input name="q" placeholder="wie man eistee macht..."/>
 			</form>
-			<div::right::menu>
+			<div::menu>
 				<a::icn href="/login/" class="fa fa-sign-in"/>
 			</div>
 		</nav>
