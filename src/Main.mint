@@ -39,8 +39,7 @@ component Nav {
 		padding: 16px;
 		background-color: #061f60;
 		color: White;
-		margin: auto;
-		border-bottom-left-radius: 16px;
+		margin-right: auto;
 		border-bottom-right-radius: 16px;
 	}
 
@@ -206,7 +205,7 @@ component Main {
 	fun render {
 		<div::uppermost>
 			<Nav/>
-			<div::page><DecisivePage/></div>
+			<DecisivePage::page/>
 		</div>
 	}
 }
