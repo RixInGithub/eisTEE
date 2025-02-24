@@ -13,7 +13,9 @@ routes {
 		Store.setSrc(`
 			(function($a){
 				$a=location.search.slice(1).split("&").find(function(a){return(a).startsWith("q=")})
-				return($a===undefined)?#{Maybe.Nothing}:#{Maybe.Just(`$a`)}
+				if($a===undefined)return(#{Maybe.Nothing})
+				$a=$a.slice(2)
+				return($a.length==0)?(#{Maybe.Nothing}):(#{Maybe.Just(`$a`))
 			})()
 		`)
 	}
