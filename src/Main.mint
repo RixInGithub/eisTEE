@@ -15,7 +15,7 @@ routes {
 				$a=location.search.slice(1).split("&").find(function(a){return(a).startsWith("q=")})
 				if($a===undefined)return(#{Maybe.Nothing})
 				$a=$a.slice(2)
-				return($a.length==0)?(#{Maybe.Nothing}):(#{Maybe.Just(`$a`))
+				return($a.length==0)?(#{Maybe.Nothing}):(#{Maybe.Just(`$a`)})
 			})()
 		`)
 	}
