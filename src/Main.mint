@@ -180,7 +180,7 @@ component PageSrc {
 	
 
 	fun render {
-		"wip"
+		Store.src
 	}
 }
 
