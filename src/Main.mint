@@ -24,7 +24,7 @@ module API {
 }
 
 module Utils {
-	fun JSON_ToMap (json : String) {
+	fun jsonToMap (json : String) {
 		encode Json.parse(json) as Map
 	}
 
@@ -184,7 +184,7 @@ component PageSrc {
 	
 
 	fun render {
-		API.call(Utils.JSON_ToMap("{"action": "src", "q": "#{`encodeURIComponent(`Store.src`)`}"}"))
+		API.call(Utils.jsonToMap("{"action": "src", "q": "#{`encodeURIComponent(#{Store.src})`}"}"))
 	}
 }
 
