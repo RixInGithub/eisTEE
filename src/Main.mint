@@ -17,11 +17,9 @@ routes {
 	}
 } // ENDROUTES
 
-/*
 fun test {
 	// if this whole file succeeds, this means function can be defined in top scope!
 }
-*/
 
 store Store {
 	state page = "guh?"
