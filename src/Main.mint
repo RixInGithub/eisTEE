@@ -10,14 +10,7 @@ routes {
 		Store.setPage("guh?")
 	}
 	/src/ {
-		Store.setSrc(`
-			(function($a){
-				$a=location.search.slice(1).split("&").find(function(a){return(a).startsWith("q=")})
-				if($a===undefined)return(#{Maybe.Nothing})
-				$a=$a.slice(2)
-				return($a.length==0)?(#{Maybe.Nothing}):(#{Maybe.Just(`$a`)})
-			})()
-		`)
+		Store.setSrc(SearchParams.get(SearchParams.fromString(Window.url().search), "q")) // this returns a `Maybe(String)` which is ideal!
 	}
 	/login/ {
 		Store.setPage("login")
@@ -44,7 +37,7 @@ window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entr
 				Store.setPage("sResults")
 				next { src: nSrc }
 			}
-			Maybe.Nothing => Window.jump("/")
+			=> Window.jump("/")
 		}
 	}
 }
