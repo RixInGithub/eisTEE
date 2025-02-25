@@ -184,7 +184,7 @@ component PageSrc {
 	
 
 	fun render {
-		API.call(Utils.jsonToMap("{\"action\": \"src\", \"q\": \"#{`encodeURIComponent(#{Store.src})`}\"}"))
+		Utils.mapToJSON(API.call(Utils.jsonToMap("{\"action\": \"src\", \"q\": \"#{`encodeURIComponent(#{Store.src})`}\"}")))
 	}
 }
 
