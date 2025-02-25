@@ -25,11 +25,11 @@ module API {
 
 module Utils {
 	fun jsonToMap (json : String) {
-		encode Json.parse(json) as Map
+		decode Json.parse(json) as Map
 	}
 
 	fun mapToJSON (map : Map) {
-		Json.stringify(decode map)
+		Json.stringify(encode map)
 	}
 }
 
