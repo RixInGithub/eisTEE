@@ -10,27 +10,27 @@ routes {
 		Store.setPage("guh?")
 	}
 	/src/ {
-		Store.setSrc(SearchParams.get(SearchParams.fromString(Window.url().search), "q")) // this returns a `Maybe(String)` which is ideal!
+		Store.setSrc(SearchParams.fromString(Window.url().search) |> SearchParams.get("q")) // this returns a `Maybe(String)` which is ideal!
 	}
 	/login/ {
 		Store.setPage("login")
 	}
 } // ENDROUTES
 
+fun test {
+	// if this whole file succeeds, this means function can be defined in top scope!
+}
+
 store Store {
 	state page = "guh?"
 	state endpnt = "https://eistee.x10.bz/index.php"
 	state src = ""
+	state api = false
+
 	fun setPage (nPage : String) {
-		`
-window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entries($a).map(function(_){return""+_.map(encodeURIComponent).join("=")}).join("&"),$b=Reflect.construct(Image,[]),$b.crossOrigin="anonymous",$b.src="#{endpnt}?"+$a,Reflect.construct(Promise,[function($c,$d){[$b.addEventListener("load",function(){[$e=document.createElement("canvas"),$e.width=$b.width,$e.height=$b.height,$e=$e.getContext("2d"),$e.drawImage($b,0,0),$b.remove(),$f=$e.getImageData(0,0,$b.width,$b.height).data,$g=Reflect.construct(DataView,[$f.buffer.slice(0,4)]),$g.setUint8(3,0),$g=$g.getUint32(0,1),$f=$f.slice(4,(($g+3-($g%3))*4)/3+5),$h=Array(($f.length/4)*3),"console.log(\"sacred\x20variable\x20$h:\",$h)",Array($f.length/4).fill(0).map(function(_,$ind){return[$ind*4,$ind*3]}).forEach(function([$ind,$j]){$k=0;while($k<3){($h[$j+$k]=$f[$ind+$k]);$k+=1}}),$c(JSON.parse(Reflect.construct(TextDecoder,[]).decode(Reflect.construct(Uint8Array,[$h]).buffer).slice(0,$g)))]}),$b.addEventListener("error",function(...$e){$b.remove()&&$d(...$e)}),document.head.appendChild($b)]}])][4]})()}
-		`
-		/* window.api(params)
-			Execute an API request to var endpnt (defined in line 12) and manuever with the response so much, an image turns into fucking JSON idek how
-		*/
 		next { page: nPage }
 	}
-	
+
 	fun setSrc (maybe : Maybe(String)) {
 		case maybe {
 			Maybe.Just(nSrc) => {
@@ -39,6 +39,13 @@ window.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entr
 			}
 			=> Window.jump("/")
 		}
+	}
+
+	fun setupApi {
+		if(!(api)){`globalThis.api=function($a){return(function($b,$e,$f,$g,$h,$k){return[$a=Object.entries($a).map(function(_){return""+_.map(encodeURIComponent).join("=")}).join("&"),$b=Reflect.construct(Image,[]),$b.crossOrigin="anonymous",$b.src="#{endpnt}?"+$a,Reflect.construct(Promise,[function($c,$d){[$b.addEventListener("load",function(){[$e=document.createElement("canvas"),$e.width=$b.width,$e.height=$b.height,$e=$e.getContext("2d"),$e.drawImage($b,0,0),$b.remove(),$f=$e.getImageData(0,0,$b.width,$b.height).data,$g=Reflect.construct(DataView,[$f.buffer.slice(0,4)]),$g.setUint8(3,0),$g=$g.getUint32(0,1),$f=$f.slice(4,(($g+3-($g%3))*4)/3+5),$h=Array(($f.length/4)*3),"console.log(\"sacred\x20variable\x20$h:\",$h)",Array($f.length/4).fill(0).map(function(_,$ind){return[$ind*4,$ind*3]}).forEach(function([$ind,$j]){$k=0;while($k<3){($h[$j+$k]=$f[$ind+$k]);$k+=1}}),$c(JSON.parse(Reflect.construct(TextDecoder,[]).decode(Reflect.construct(Uint8Array,[$h]).buffer).slice(0,$g)))]}),$b.addEventListener("error",function(...$e){$b.remove()&&$d(...$e)}),document.head.appendChild($b)]}])][4]})()}`}
+		/* globalThis.api(params)
+			Execute an API request to var endpnt (defined in line 22) and manuever with the response so much, an image turns into fucking JSON idek how
+		*/
 	}
 }
 
