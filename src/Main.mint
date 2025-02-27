@@ -184,7 +184,7 @@ async component PageSrc {
 	// bump
 
 	fun render {
-		Json.stringify(API.call(encode {"action": "src", "q": "#{(`encodeURIComponent(#{Store.src})`)}"}))
+		Json.stringify(API.call(encode {action: "src", q: "#{(`encodeURIComponent(#{Store.src})`)}"}))
 	}
 }
 
