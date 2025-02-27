@@ -179,11 +179,18 @@ component PageMain {
 	}
 }
 
+// where is var
+
 async component PageSrc {
-	// bump
+	state search : String = ""
+
+	fun componentDidMount {
+		let res = Json.stringify(await API.call(encode {action: "src", q: "#{(`encodeURIComponent(#{Store.src})`)}"}))
+		next { search: res }
+	}
 
 	fun render {
-		Json.stringify(await API.call(encode {action: "src", q: "#{(`encodeURIComponent(#{Store.src})`)}"}))
+		search
 	}
 }
 
